@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+set +e
+
 cd `dirname $0`/..
 SOURCE=`pwd`
 
