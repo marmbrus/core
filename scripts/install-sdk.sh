@@ -53,7 +53,7 @@ updatePackage() {
     rev=`git rev-parse --revs-only $version`
     
     if [ "$rev" == "" ]; then
-        git fetch origin
+        for i in 1 2 3 4 5; do git fetch origin && break || sleep 15; done
     fi
     
     status=`git status --porcelain --untracked-files=no`
